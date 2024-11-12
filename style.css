@@ -1,0 +1,181 @@
+/* Reset default styling */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   color: #e0e0e0;
+   background-color: #1e1e1e;
+}
+
+/* Navbar styling */
+#navbar {
+   background-color: rgb(40, 40, 40);
+   padding: 10px;
+}
+
+#navbar ul {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1000px;
+}
+
+#navbar ul li a {
+   text-decoration: none;
+   color: #e0e0e0;
+   font-weight: bold;
+   font-size: 1.1em;
+   transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+   color: #ffd369;
+}
+
+#navbar ul li#buy-coffee a {
+   display: flex;
+   align-items: center;
+   font-size: 1.1em; /* Same size as other navbar items */
+   text-decoration: none;
+}
+
+#navbar ul li#buy-coffee img {
+   width: 18px; /* Adjust image size to make it small */
+   height: 18px;
+   margin-left: 8px; /* Space between text and image */
+   transition: transform 0.3s ease;
+   border-radius: 50%;
+}
+
+#navbar ul li#buy-coffee a:hover img {
+   transform: scale(1.1);
+}
+
+/* Header styling */
+header {
+   text-align: center;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: #4a4a8a;
+   color: #fff;
+}
+
+/* Intro section styling */
+.intro-container {
+   display: flex;
+   align-items: center;
+   padding: 40px;
+   max-width: 800px;
+   margin: 20px auto;
+   background-color: #333;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   margin-right: 20px;
+}
+
+.intro-text {
+   font-size: 1.2em;
+}
+
+/* Skills section styling */
+#skills h2, #soft-skills h2 {
+   text-align: center;
+   margin: 30px 0 20px;
+   font-size: 1.8em;
+   color: #ffd369;
+}
+
+.skills-container {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.skill img {
+   width: 100px;
+   height: 100px;
+   border-radius: 8px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img:hover {
+   transform: scale(1.1);
+   box-shadow: 0 4px 10px rgba(255, 211, 105, 0.6);
+}
+
+/* Soft Skills section styling */
+.soft-skills-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 15px;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.soft-skill {
+   background-color: #555;
+   padding: 10px 15px;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   transition: background-color 0.3s ease;
+   color: #e0e0e0;
+   text-align: center;
+   word-wrap: break-word;
+}
+
+.soft-skill:hover {
+   background-color: #ffd369;
+   color: #1e1e1e;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+   body {
+       font-size: 0.9rem;
+   }
+
+   .intro-container {
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
+   }
+
+   .profile-pic {
+       margin-bottom: 20px;
+   }
+
+   /* Make navbar items stack vertically on small screens */
+   #navbar ul {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   #navbar ul li {
+       margin: 10px 0; /* Vertical spacing */
+   }
+}
+
+/* Trademark styling */
+.trademark {
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
+   color: #e0e0e0;
+   font-size: 0.8em;
+   opacity: 0.6;
+}

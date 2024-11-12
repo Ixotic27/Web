@@ -1,0 +1,245 @@
+/* Reset default styling */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   color: #e0e0e0; /* Light gray text for readability */
+   background-color: #1e1e1e; /* Dark background */
+}
+
+/* Updated Navbar styling */
+#navbar {
+   background-color: rgb(40, 40, 40); /* Darker color for navbar */
+   padding: 10px; /* Adjusted padding for the navbar */
+}
+
+#navbar ul {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1000px;
+}
+
+
+#navbar ul li a {
+   text-decoration: none;
+   color: #e0e0e0;
+   font-weight: bold;
+   font-size: 1.1em;
+   transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+   color: #ffd369; /* Hover color */
+}
+
+#navbar ul li#buy-coffee a {
+   display: flex;
+   align-items: center;
+   font-size: 1.1em; /* Same size as other navbar items */
+   text-decoration: none;
+}
+
+#navbar ul li#buy-coffee img {
+   width: 18px; /* Adjust image size to make it small */
+   height: 18px;
+   margin-left: 8px; /* Space between text and image */
+   transition: transform 0.3s ease;
+   border-radius: 50px;
+}
+
+#navbar ul li#buy-coffee a:hover img {
+   transform: scale(1.1);
+}
+
+/* Header styling */
+header {
+   text-align: center;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: #4a4a8a; /* Header background color */
+   color: #fff; /* White text for header */
+}
+
+header h1 {
+   font-size: 2.5em;
+   margin-bottom: 10px;
+}
+
+header p {
+   font-size: 1.2em;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+   background-color: #2a2a2a; /* Dark background for form */
+   padding: 20px;
+   border-radius: 8px;
+   width: 80%;
+   max-width: 600px;
+   margin: 30px auto; /* Space after navbar */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-header {
+   text-align: center;
+   font-size: 1.5em;
+   color: #c0c0c0; /* Greyish header */
+   margin-bottom: 20px;
+}
+
+/* Input fields styling */
+input[type="text"], input[type="email"], textarea {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 2px solid #444;
+   border-radius: 4px;
+   background-color: #333;
+   color: #00aaff; /* Blue text */
+   font-size: 1em;
+}
+
+/* Ensuring textarea height expands but not width */
+textarea {
+   resize: vertical; /* Only allows vertical resizing */
+   min-height: 100px; /* Set a minimum height for the textarea */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+   border-color: #ffd369; /* Highlight with yellowish border */
+   outline: none;
+}
+
+/* Button styling */
+button[type="submit"] {
+   width: 100%;
+   padding: 10px;
+   background-color: #ff4081; /* Pink button */
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   font-size: 1.1em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+   background-color: #ff1f68; /* Darker pink on hover */
+}
+
+/* Rotated pink square boxes styling */
+.contact-form-container::before,
+.contact-form-container::after {
+   content: '';
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   background-color: #ff4081; /* Pink color */
+   transform: rotate(45deg);
+   top: -20px;
+   left: 20px;
+}
+
+.contact-form-container::after {
+   top: -20px;
+   right: 20px;
+}
+
+/* Contact form container relative positioning */
+.contact-form-container {
+   position: relative;
+}
+
+/* Main section styling */
+main {
+   padding: 20px;
+   text-align: center;
+   background-color: #333333; /* Darker background for main section */
+   border-radius: 8px;
+   margin: 1rem auto;
+   max-width: 800px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social links styling */
+.social-links {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   margin-top: 20px;
+}
+
+.social-links a {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: whitesmoke;
+   text-decoration: none;
+}
+
+.social-links a img {
+   width: 40px; /* Size of the icon */
+   height: 40px;
+   margin-bottom: 5px;
+   transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+   transform: scale(1.1);
+}
+
+.social-links a:hover p {
+   color: #ffd369; /* Hover color for text */
+}
+
+.social-links p {
+   margin: 0;
+   font-size: 0.9em;
+   color: whitesmoke;
+}
+
+/* Trademark styling */
+.trademark {
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
+   color: #e0e0e0;
+   font-size: 0.8em;
+   opacity: 0.6;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+   body {
+       font-size: 0.9rem;
+   }
+
+   main {
+       padding: 1rem;
+       margin: 1rem 0.5rem;
+   }
+
+   .contact-form-container {
+       width: 90%;
+       padding: 15px;
+   }
+   /* Make navbar items stack vertically on small screens */
+   #navbar ul {
+      flex-direction: row;
+      align-items: center;
+      margin-left: auto;
+  }
+
+  #navbar ul li {
+      margin: 10px 0; /* Vertical spacing */
+  }
+
+}
+
