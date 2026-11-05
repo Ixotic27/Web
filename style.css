@@ -76,6 +76,7 @@ header {
    background-color: #333;
    border-radius: 10px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   gap: 20px; /* Added for spacing between CMD box and profile */
 }
 
 .profile-pic {
@@ -87,6 +88,63 @@ header {
 
 .intro-text {
    font-size: 1.2em;
+}
+
+/* CMD Box Styling */
+.cmd-style-box {
+    width: 550px;
+    background-color: #2b2b2b; /* Dark box background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CMD Box Header Styling */
+.cmd-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff; /* White header background */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Dots in CMD Header */
+.cmd-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red {
+    background-color: #ff5f56;
+}
+
+.yellow {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
+/* CMD Content Area */
+.cmd-content {
+    padding: 20px;
+    color: whitesmoke; /* Blue text for improved readability */
+    font-size: 16px;
+    line-height: 2.5;
+    position: relative;
+}
+
+/* Author's Name Alignment */
+.cmd-content::after {
+    content: "- Ishant";
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: whitesmoke;
 }
 
 /* Skills section styling */
